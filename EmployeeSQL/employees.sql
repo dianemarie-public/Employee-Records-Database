@@ -50,3 +50,4 @@ CREATE TABLE "titles" (
      )
 );
 
+SELECT * FROM employees;
