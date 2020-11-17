@@ -59,52 +59,35 @@ CREATE TABLE "titles" (
      )
 );
 
-SELECT * FROM employees;
-
+-- #1 Connect employees and salaries by INNER JOIN
 SELECT employees.emp_no, salaries.emp_no
 FROM salaries
 INNER JOIN employees ON
 employees.emp_no=salaries.emp_no;
 
-SELECT * FROM salaries;
-
+-- #2 Connect employees and titles by INNER JOIN
 SELECT employees.emp_title, titles.title_id
 FROM titles
 INNER JOIN employees ON
 employees.emp_title=titles.title_id;
 
-SELECT * FROM titles;
-
-SELECT departments.dept_no, dept_manager.dept_no
-FROM dept_manager
-INNER JOIN departments ON
-departments.dept_no=dept_manager.dept_no
-
-SELECT * FROM departments;
-
-SELECT * FROM dept_manager;
-
+-- #3 Connect dept_manager and employees by INNER JOIN
 SELECT dept_manager.emp_no, employees.emp_no
 FROM employees
 INNER JOIN dept_manager ON
 dept_manager.emp_no=employees.emp_no
 
-SELECT * FROM dept_emp;
-
+-- #4 Connect dept_emp and employees by INNER JOIN
 SELECT dept_emp.emp_no, employees.emp_no
 FROM employees
 INNER JOIN dept_emp ON
 dept_emp.emp_no=employees.emp_no
 
-SELECT * FROM dept_emp;
+-- #5 Connect departments and dept_manager by INNER JOIN
+SELECT departments.dept_no, dept_manager.dept_no
+FROM dept_manager
+INNER JOIN departments ON
+departments.dept_no=dept_manager.dept_no
 
-SELECT dept_emp.dept_no, departments.dept_no
-FROM departments
-INNER JOIN dept_emp ON
-dept_emp.dept_no=departments.dept_no
 
-SELECT dept_manager.dept_no, dept_emp.dept_no
-FROM employees
-INNER JOIN dept_manager ON
-dept_manager.emp_no=employees.emp_no
 
