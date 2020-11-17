@@ -14,6 +14,12 @@ JOIN salaries AS salary
 	ON employees.id = salary.emp_no;
 	
 --2. List first name, last name, and hire date for employees who were hired in 1986.
+SELECT * FROM employees;
+
+SELECT employees.first_name, employees.last_name, employees.hire_date
+FROM employees
+WHERE hire_date SIMILAR TO '%1986'; 
+
 --3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 --4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 --5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
