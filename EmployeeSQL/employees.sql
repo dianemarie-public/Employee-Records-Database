@@ -81,3 +81,25 @@ INNER JOIN departments ON
 departments.dept_no=dept_manager.dept_no
 
 SELECT * FROM departments;
+
+SELECT * FROM dept_manager;
+
+SELECT dept_manager.emp_no, employees.emp_no
+FROM employees
+INNER JOIN dept_manager ON
+dept_manager.emp_no=employees.emp_no
+
+SELECT * FROM dept_emp;
+
+SELECT dept_emp.emp_no, employees.emp_no
+FROM employees
+INNER JOIN dept_emp ON
+dept_emp.emp_no=employees.emp_no
+
+SELECT * FROM dept_emp;
+
+SELECT dept_emp.dept_no, departments.dept_no
+FROM departments
+INNER JOIN dept_emp ON
+dept_emp.dept_no=departments.dept_no
+
