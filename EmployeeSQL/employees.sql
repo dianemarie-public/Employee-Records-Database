@@ -103,3 +103,8 @@ FROM departments
 INNER JOIN dept_emp ON
 dept_emp.dept_no=departments.dept_no
 
+SELECT dept_manager.dept_no, dept_emp.dept_no
+FROM employees
+INNER JOIN dept_manager ON
+dept_manager.emp_no=employees.emp_no
+
