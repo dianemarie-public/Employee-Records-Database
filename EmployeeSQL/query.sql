@@ -21,6 +21,13 @@ FROM employees
 WHERE hire_date SIMILAR TO '%1986'; 
 
 --3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+SELECT * FROM dept_manager;
+
+SELECT employees.id, employees.last_name, employees.first_name, dept_manager.dept_no, deptartments.dept_name
+FROM employees
+JOIN salaries AS salary
+	ON employees.id = salary.emp_no;
+	
 --4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 --5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 --6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
