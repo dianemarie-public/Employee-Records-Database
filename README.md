@@ -7,8 +7,7 @@
 
 * Create a table schema for each of the six csv files, specifying data types, primary keys, foreign keys and other constraints.
 * Import each csv into the corresponding SQL table
-* Sample SQL code
-      
+* Sample SQL code     
    ```
    CREATE TABLE "employees" (
    "emp_no" integer   NOT NULL,
@@ -25,4 +24,3 @@
    ```
 * Data Analysis
    * List each employee with employee number, last name, first name, sex and salary.
-   * 
