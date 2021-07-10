@@ -2,7 +2,8 @@
 
 * Design SQL tables to hold data imported from csv
 * SQL Database Schema
-![sql-schema](sql-schema.png)
+
+![sql-schema](/Images/sql-schema.png)
 
 * Create a table schema for each of the six csv files, specifying data types, primary keys, foreign keys and other constraints.
 * Import each csv into the corresponding SQL table
